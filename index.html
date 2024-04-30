@@ -12,7 +12,7 @@
 <body>
     <header>
         <p id="top">&nbsp;</p>
-        <nav class="navbar navbar-dark fixed-top">
+        <nav class="navbar  fixed-top" id="topBar">
         <div class="container">
             <a class="navbar-brand logo" href="#top"><img src="images/logoNav.png"></a>
             <div class="nav nav-masthead">
@@ -286,31 +286,31 @@
             </div>
             
             <div class="mySlides" style="display: none;">
-            <h2 class="work-title">MIT Division of Student Life</h2>
+            <h2 class="work-title">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, nobis.</h2>
             <p class="description">
-            Facilitated brainstorm sessions to develop content and design concepts to promote Student Support and Wellbeing services.</p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam error ipsa repudiandae illum cupiditate libero quaerat nostrum adipisci, magni assumenda.</p>
             <img src="images/print-work2.jpg">
             </div>
             
             <div class="mySlides" style="display: block;">
-            <h2 class="work-title">MIT Division of Student Life</h2>
+            <h2 class="work-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
             <p class="description">
-            Designed poster and table tent to promote meal plan sharing on campus.</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias aperiam possimus commodi neque nesciunt sapiente.</p>
             <img src="images/print-work3.jpg">
             </div>
             
             <div class="mySlides" style="display: none;">
-            <h2 class="work-title">One World at MIT</h2>
+            <h2 class="work-title">Lorem ipsum dolor sit.</h2>
             <p class="description">
-            Designed graphic identity, promotional materials, and developed a website for MIT One World event.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, a! Dolorem, repellat. At impedit, quo recusandae reiciendis facere rem itaque!
             </p>
             <img src="images/print-work4.jpg">
             </div>
             
             <div class="mySlides" style="display: none;">
-            <h2 class="work-title">MIT Office of Major Agreements</h2>
+            <h2 class="work-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h2>
             <p class="description">
-            Provided graphic identity concepts, MS Word, and PowerPoint templates.</p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, doloribus.</p>
             <img src="images/print-work5.jpg">
             </div>
             
@@ -332,43 +332,18 @@
             </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>
-        // <![CDATA[  <-- For SVG support
-        if ('WebSocket' in window) {
-            (function () {
-                function refreshCSS() {
-                    var sheets = [].slice.call(document.getElementsByTagName("link"));
-                    var head = document.getElementsByTagName("head")[0];
-                    for (var i = 0; i < sheets.length; ++i) {
-                        var elem = sheets[i];
-                        var parent = elem.parentElement || head;
-                        parent.removeChild(elem);
-                        var rel = elem.rel;
-                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-                        }
-                        parent.appendChild(elem);
-                    }
-                }
-                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-                var address = protocol + window.location.host + window.location.pathname + '/ws';
-                var socket = new WebSocket(address);
-                socket.onmessage = function (msg) {
-                    if (msg.data == 'reload') window.location.reload();
-                    else if (msg.data == 'refreshcss') refreshCSS();
-                };
-                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-                    console.log('Live reload enabled.');
-                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-                }
-            })();
-        }
-        else {
-            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-        }
-        // ]]>
-    </script>
+
     <script src="lightbox.js"></script>
+    <script src="livereload.js"></script>
+    <script>
+        window.onscroll = function() {
+  var navbar = document.getElementById('topBar');
+  if (window.pageYOffset > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+};
+    </script>
 </body>
 </html>
