@@ -140,7 +140,7 @@ img {
   margin-bottom: 20px;
 }
 .overlay-text {
-  color: white;
+  color: #3c6ca8;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -165,7 +165,7 @@ img {
   width: 100%;
   opacity: 0;
   cursor: pointer;
-  background-color: #90278E;
+  background-color: #eae164;
 }
 .container2:hover .overlay {
   opacity: 1;
