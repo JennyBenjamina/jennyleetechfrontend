@@ -133,6 +133,12 @@ img {
 }
 /* End Lightbox */
 
+.logo {
+  width: 200px; /* Adjust this to change the initial size of the logo */
+  height: auto; /* This keeps the aspect ratio of the logo */
+  max-width: 100%; /* This makes the logo responsive */
+}
+
 .nav-masthead .nav-link {
     font-weight: 700;
     color: #000;
@@ -511,8 +517,3 @@ nav {
   opacity: 0.7;
 }
 
-.logo {
-  width: 200px; /* Adjust this to change the initial size of the logo */
-  height: auto; /* This keeps the aspect ratio of the logo */
-  max-width: 100%; /* This makes the logo responsive */
-}
