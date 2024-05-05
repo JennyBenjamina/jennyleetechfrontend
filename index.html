@@ -14,7 +14,7 @@
         <p id="top">&nbsp;</p>
         <nav class="navbar  fixed-top" id="topBar">
         <div class="container">
-            <a class="navbar-brand logo" href="#top"><img src="images/logoNav.png"></a>
+            <a class="navbar-brand logo" href="#top"><img src="images/logo.png"></a>
             <div class="nav nav-masthead">
                 <a class="nav-link" href="#work">Work</a>
                 <a class="nav-link" href="#about">About</a>
@@ -29,8 +29,7 @@
 
 
 
-            <div class="container">
-              <!-- Status message -->
+            <!-- <div class="container">
             
                 <div class="headline-area">
                   <h1 class="display-3">Hi!<span class="wave">👋</span></h1>
@@ -38,7 +37,21 @@
                   <h2 class="headline-area-subheading">Check out my work below <span class="wave-4">👇</span> .</h2>
 
                 </div>
+            </div> -->
+
+            <div class="hero-video">
+              <video autoplay muted loop id="myVideo">
+                <source src="./images/hero.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="hero-text">
+                <h1 class="display-3">Hi!<span class="wave">👋</span></h1>
+                <h2 class="headline-area-subheading">My name is Jenny. I like to code <span class="wave-2">👩‍💻</span> and play golf <span class="wave-3">🏌️‍♀️</span>.</h2>
+                <h2 class="headline-area-subheading">Check out my work below <span class="wave-4">👇</span> .</h2>
+                
+              </div>
             </div>
+            
             <p id="work">&nbsp;</p>
             
             <!-- Start Content Container -->
@@ -190,7 +203,7 @@
                   </div>
             
             <p id="about">&nbsp;</p>
-              <h2 class="subhead">About Us</h2>
+              <h2 class="subhead">About Me</h2>
                 <hr class="featurette-divider">
             
                 <div class="row">
@@ -204,23 +217,12 @@
                 <p class="bio-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sint aut, dignissimos quis tempore numquam perspiciatis ex dolore sequi id unde sunt voluptatibus corporis blanditiis error velit, minima libero eius!</p>
                 </div>
                 </div>
-            <p>&nbsp;</p>
-                <div class="row">
-                <div class="col-md-3">
-                    <div class="bio-photo-container">
-                <img src="images/bio-photo-am.jpg" class="bio-photo">
-                </div>  
-                </div>
-                <div class="col-md-9">
-                  <h3 class="bio-name">Allen Mills</h3>
-                <p class="bio-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla dicta expedita inventore, delectus alias minima eligendi exercitationem nesciunt? Quo, beatae expedita. Eveniet voluptates soluta quos. Fugiat exercitationem voluptas nostrum veniam veritatis sed optio, quasi dicta!</p>
-                </div>
-                </div>
+ 
             
             <p id="contact">&nbsp;</p>
-              <h2 class="subhead">Contact Us</h2>
+              <h2 class="subhead">Contact Me</h2>
                 <hr class="featurette-divider">
-                    <p class="contact-text">If you have any questions about our services, please contact us at <a href="mailto:info@leemillsgroup.com">info@LeeMillsGroup.com</a></p>
+                    <p class="contact-text">If you have any questions about my services, please contact me at <a href="mailto:JennyLee1989@gmail.com">JennyLee1989@gmail.com</a></p>
             
             
             <p>&nbsp;</p>
@@ -338,7 +340,7 @@
               <footer class="container">
                    <hr class="featurette-divider">
             
-                <p>© 2024 LeeMills Enterprise</p>
+                <p>© 2024 Jenny Lee Golf</p>
               </footer>
             </main>
 
@@ -355,6 +357,23 @@
     navbar.classList.remove('scrolled');
   }
 };
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', adjustheroVideoHeight);
+        window.addEventListener('resize', adjustheroVideoHeight);
+
+        function adjustheroVideoHeight() {
+          var navbar = document.querySelector('.navbar'); // Replace '.navbar' with the selector for your navbar
+          var heroVideo = document.querySelector('.hero-video');
+          var navbarHeight = navbar.offsetHeight;
+
+
+          heroVideo.style.height = 'calc(100vh - ' + navbarHeight + 'px)';
+          heroVideo.style.marginTop = navbarHeight + 'px';
+        }
+
+
     </script>
 
     

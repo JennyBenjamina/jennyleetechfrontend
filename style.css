@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
+
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.button {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -174,8 +192,8 @@ img {
     z-index: 100;
 }
 .display-3 {
-  color: #000;
-  font-weight: 200;
+  color: #b78fd6;
+  font-weight: 700;
   font-size: 3rem;
   line-height: 1.3em;
   width: 100%;
@@ -254,7 +272,7 @@ img {
 }
 .display-3 {
   font-size: 1.7rem;
-  font-weight: 400;
+  font-weight: 700;
 }
 .display-2 {
   margin-top: 80px;
@@ -314,12 +332,10 @@ img {
 }
 
 
-
 /* color theme */
 
 body .display-3{
-  color: #b78fd6 !important;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .subhead {
@@ -447,4 +463,56 @@ nav {
 @keyframes grow {
   0% { transform: scale(0.5); }
   100% { transform: scale(1); }
+}
+
+
+/* hero area */
+
+.hero-video {
+  position: relative;
+  height: calc(100vh - 60px); /* Adjust the height to be full viewport minus the navbar height */
+  overflow: hidden;
+}
+
+.hero-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the last value to change the opacity */
+  z-index: 1;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--primary-color) !important;
+}
+
+#myVideo {
+  opacity: 0.7;
+}
+
+.logo {
+  width: 200px; /* Adjust this to change the initial size of the logo */
+  height: auto; /* This keeps the aspect ratio of the logo */
+  max-width: 100%; /* This makes the logo responsive */
 }
