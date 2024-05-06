@@ -27,7 +27,13 @@
         </header>
         <main role="main">
 
+<h1 class="container-fluid d-none d-md-flex">
 
+  <div class="js-t-line">CREATING</div>
+  <div class="js-t-line">BRANDS</div>
+  <div class="js-t-line">THAT</div>
+  <div class="js-t-line">INSPIRE</div>
+</h1>
 
             <!-- <div class="container">
             
@@ -39,17 +45,16 @@
                 </div>
             </div> -->
 
-            <div class="hero-video">
+            <div class="hero-video container ">
+              <div class="row">
+                <div class="col-md-8">
               <video autoplay muted loop id="myVideo">
                 <source src="./images/hero.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
-              <div class="hero-text">
-                <h1 class="display-3">Hi!<span class="wave">👋</span></h1>
-                <h2 class="headline-area-subheading">My name is Jenny. I like to code <span class="wave-2">👩‍💻</span> and play golf <span class="wave-3">🏌️‍♀️</span>.</h2>
-                <h2 class="headline-area-subheading">Check out my work below <span class="wave-4">👇</span> .</h2>
-                
-              </div>
+            </div>
+            <div class="col-md-4"></div>
+            </div>
             </div>
             
             <p id="work">&nbsp;</p>
@@ -57,7 +62,7 @@
             <!-- Start Content Container -->
              
             <div class="container">
-              <h2 class="subhead">WEB APPS</h2>
+              <h2 class="subhead mt-lg-5">WEB APPS</h2>
                 <hr class="featurette-divider">
             <!-- New Row -->
                  <div class="row">
@@ -128,8 +133,8 @@
              <p class="approach-text">
               These projects use ReactJS, AngularJS, Squarespace, Python, openAI, and Shopify.  
             </p> 
-            <p>&nbsp;</p>
-            <h2 class="subhead">Golfer</h2>
+            <p class="">&nbsp;</p>
+            <h2 class="subhead mt-lg-5">Golfer</h2>
                 <hr class="featurette-divider">
             <!-- New Row -->
                 <div class="row">
@@ -206,7 +211,7 @@
                   </div>
             
             <p id="about">&nbsp;</p>
-              <h2 class="subhead">About Me</h2>
+              <h2 class="subhead mt-lg-5">About Me</h2>
                 <hr class="featurette-divider">
             
                 <div class="row">
@@ -225,7 +230,7 @@
  
             
             <p id="contact">&nbsp;</p>
-              <h2 class="subhead">Contact Me</h2>
+              <h2 class="subhead mt-lg-5">Contact Me</h2>
                 <hr class="featurette-divider">
                     <p class="contact-text">If you have any questions about my services, please contact me at <a href="mailto:info@jennylee.golf">info@jennylee.golf</a></p>
             
@@ -376,22 +381,42 @@
     </script>
 
     <script>
-        window.addEventListener('DOMContentLoaded', adjustheroVideoHeight);
-        window.addEventListener('resize', adjustheroVideoHeight);
+        // window.addEventListener('DOMContentLoaded', adjustheroVideoHeight);
+        // window.addEventListener('resize', adjustheroVideoHeight);
 
-        function adjustheroVideoHeight() {
-          var navbar = document.querySelector('.navbar'); // Replace '.navbar' with the selector for your navbar
-          var heroVideo = document.querySelector('.hero-video');
-          var navbarHeight = navbar.offsetHeight;
+        // function adjustheroVideoHeight() {
+        //   var navbar = document.querySelector('.navbar'); // Replace '.navbar' with the selector for your navbar
+        //   var heroVideo = document.querySelector('.hero-video');
+        //   var navbarHeight = navbar.offsetHeight;
 
 
-          heroVideo.style.height = 'calc(100vh - ' + navbarHeight + 'px)';
-          heroVideo.style.marginTop = navbarHeight + 'px';
-        }
+        //   heroVideo.style.height = 'calc(50vh - ' + navbarHeight + 'px)';
+        //   heroVideo.style.marginTop = navbarHeight + 'px';
+        // }
 
 
     </script>
 
+<script>
+// dthis isnt working
+    var video = document.getElementById("myVideo");
+
+    video.addEventListener("mouseover", function() {
+      video.pause();
+    });
+
+    video.addEventListener("mouseout", function() {
+      video.play();
+    });
+</script>
+
+<script>
+document.querySelectorAll('.js-t-line').forEach((element, index) => {
+  setTimeout(() => {
+    element.style.transform = `translate(0px, ${index * 30}px)`;
+  }, index * 1000);
+});
+</script>
     
 </body>
 </html>
