@@ -470,7 +470,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh; /* Adjust as needed */
+  height: 30vh; /* Adjust as needed */
 }
 
 
@@ -514,8 +514,8 @@ h1 {
 
 .hero-video {
   position: relative;
-  width: 65%; /* Adjust this to change the width of the video */
-  height: calc(50vh - 60px); /* Adjust the height to be full viewport minus the navbar height */
+  width: 75%; /* Adjust this to change the width of the video */
+  height: calc(40vh - 60px); /* Adjust the height to be full viewport minus the navbar height */
   overflow: hidden;
 }
 
