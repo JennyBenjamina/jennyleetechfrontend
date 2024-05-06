@@ -343,11 +343,10 @@ body .display-3{
   text-transform: uppercase;
 }
 
-nav {
-}
+
 
 .nav-link {
-  color: #3c6ca8 !important; 
+  color: black !important; 
   font-size: 1.4rem;
 }
 
@@ -378,85 +377,11 @@ nav {
   color: #b78fd6;
 }
 
-/* animation */
-.wave {
-  animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
 
-@keyframes wave-animation {
-  0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
- 20% { transform: rotate(-8.0deg) }
- 30% { transform: rotate(14.0deg) }
- 40% { transform: rotate(-4.0deg) }
- 50% { transform: rotate(10.0deg) }
- 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
-100% { transform: rotate( 0.0deg) }
-}
-
-
-.wave-2 {
-  animation-name: wave-animation-2;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation-2 {
-  0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(7.0deg) }
- 20% { transform: rotate(-4.0deg) }
- 30% { transform: rotate(7.0deg) }
- 40% { transform: rotate(-2.0deg) }
- 50% { transform: rotate(5.0deg) }
- 60% { transform: rotate( 0.0deg) }
-100% { transform: rotate( 0.0deg) }
-}
-
-.wave-3 {
-  animation-name: wave-animation-3;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation-3 {
-  0% { transform: rotate( 0.0deg) }
- 10% { transform: rotate(28.0deg) }
- 20% { transform: rotate(-16.0deg) }
- 30% { transform: rotate(28.0deg) }
- 40% { transform: rotate(-8.0deg) }
- 50% { transform: rotate(20.0deg) }
- 60% { transform: rotate( 0.0deg) }
-100% { transform: rotate( 0.0deg) }
-}
-
-.wave-4 {
-  animation-name: wave-animation-4;  /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.5s;        /* Change to speed up or slow down */
-  animation-iteration-count: infinite;  /* Never stop waving :) */
-  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
-  display: inline-block;
-}
-
-@keyframes wave-animation-4 {
-  0% { transform: rotate( 0.0deg) }
- 20% { transform: rotate(14.0deg) }
- 40% { transform: rotate(-8.0deg) }
- 60% { transform: rotate(14.0deg) }
- 80% { transform: rotate(-4.0deg) }
-100% { transform: rotate( 0.0deg) }
-}
-
+/*  */
 
 .container2{
-  animation: grow 2s ease-in-out;
+  animation: grow 2s ease-in-out forwards;
 }
 
 
@@ -464,6 +389,9 @@ nav {
   0% { transform: scale(0.5); }
   100% { transform: scale(1); }
 }
+
+
+
 
 /* Header */
 h1 {
@@ -519,6 +447,16 @@ h1 {
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .hero-video {
+    width: 100%;
+  }
+
+  .mt-10 {
+    margin-top: 10rem !important;
+  }
+}
+
 .hero-video video {
   position: absolute;
   top: 70%; /* Adjust this to change the vertical focus point of the video */
@@ -530,7 +468,6 @@ h1 {
   height: auto;
   overflow: hidden;
 }
-
 
 
 
