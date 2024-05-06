@@ -27,13 +27,17 @@
         </header>
         <main role="main">
 
-<h1 class="container-fluid d-none d-md-flex">
+<h1 class="container-fluid t-line d-none d-md-flex">
 
   <div class="js-t-line">LEARN</div>
   <div class="js-t-line">INSPIRE</div>
   <div class="js-t-line">MOTIVATE</div>
 </h1>
 
+<h1 class="container d-md-none mt-10">
+  <hr class="featurette-divider">
+  <div class="top-line">LEARN INSPIRE MOTIVATE</div>
+</h1>
 
             <!-- <div class="container">
             
@@ -46,7 +50,7 @@
             </div> -->
 <div class="container">
   <div class="row mt-lg-5 justify-content-center">
-            <div class="hero-video col-12 col-md-10 mt-5 mt-md-0 mt-10">
+            <div class="hero-video col-12 col-md-10 mt-5 mt-md-0">
               <video autoplay muted loop id="myVideo">
                 <source src="./images/hero.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
@@ -216,18 +220,26 @@
               <h2 class="subhead mt-lg-5">About Me</h2>
                 <hr class="featurette-divider">
             
-                <div class="row">
+                <div class="row about-me">
                 <div class="col-md-3">
                     <div class="bio-photo-container">
                 <img src="images/bio-photo.jpg" class="bio-photo">
                     </div>
                 </div>
-                <div class="col-md-9">
-                  <h3 class="bio-name">Jenny Lee</h3>
-                <p class="bio-text">
-                  Hey there, I'm Jenny Lee, your go-to gal for all things web wizardry and golf greatness! As the brains behind Jenny Lee Web Services, I get to flex my tech muscles, whipping up dynamic user interfaces with ReactJS and AngularJS, while also dabbling in Python (Flask) for some backend magic. From fine-tuning websites on Squarespace to adding that extra oomph with Shopify's e-commerce prowess, I'm all about crafting digital wonders that marry functionality with aesthetics. But wait, there's more! When I'm not buried in code, you'll catch me at Oakmont Country Club, making sure tee-offs go off without a hitch and keeping the golf shop looking like a pro merchandiser's dream. With a background that spans from the greens of professional golf tournaments to the halls of academia, I bring a unique blend of passion and expertise to everything I do, whether it's sinking birdies or slinging code. Let's tee up some success together!
-                </p>
-                </div>
+                    <div class="col-md-9">
+                      <h3 class="bio-name">Jenny Lee</h3>
+                    <!-- <p class="bio-text">
+                      Hey there, I'm Jenny Lee, your go-to gal for all things web wizardry and golf greatness! As the brains behind Jenny Lee Web Services, I get to flex my tech muscles, whipping up dynamic user interfaces with ReactJS and AngularJS, while also dabbling in Python (Flask) for some backend magic. From fine-tuning websites on Squarespace to adding that extra oomph with Shopify's e-commerce prowess, I'm all about crafting digital wonders that marry functionality with aesthetics. But wait, there's more! When I'm not buried in code, you'll catch me at Oakmont Country Club, making sure tee-offs go off without a hitch and keeping the golf shop looking like a pro merchandiser's dream. With a background that spans from the greens of professional golf tournaments to the halls of academia, I bring a unique blend of passion and expertise to everything I do, whether it's sinking birdies or slinging code. Let's tee up some success together!
+                    </p> -->
+                    <p class="bio-text">
+                      Hey there, I'm Jenny Lee, your go-to gal for all things web wizardry and golf greatness! As the brains behind Jenny Lee Web Services, I get to flex my tech muscles, whipping up dynamic user interfaces with ReactJS and AngularJS, while also dabbling in Python (Flask) for some backend magic. 
+                      <span id="more-text" style="display: none;">
+                        From fine-tuning websites on Squarespace to adding that extra oomph with Shopify's e-commerce prowess, I'm all about crafting digital wonders that marry functionality with aesthetics. But wait, there's more! When I'm not buried in code, you'll catch me at Oakmont Country Club, making sure tee-offs go off without a hitch and keeping the golf shop looking like a pro merchandiser's dream. With a background that spans from the greens of professional golf tournaments to the halls of academia, I bring a unique blend of passion and expertise to everything I do, whether it's sinking birdies or slinging code. Let's tee up some success together!
+                      </span>
+                      <button id="read-more" class="btn btn-info">Read More</button>
+                    </p>
+
+                    </div>
                 </div>
  
             
@@ -314,7 +326,7 @@
               </div>
 
             
-            <div class="mySlides" style="display: none;">
+            <!-- <div class="mySlides" style="display: none;">
             <h2 class="work-title">Symetra Tour Morongo</h2>
             <p class="description">
             Designed event brochure and poster.</p>
@@ -348,7 +360,7 @@
             <p class="description">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus, doloribus.</p>
             <img src="images/print-work5.jpg">
-            </div>
+            </div> -->
             
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" onclick="plusSlides(1)">❯</a>
@@ -363,7 +375,7 @@
               <footer class="container">
                    <hr class="featurette-divider">
             
-                <p>© 2024 Jenny Lee Golf</p>
+                <p>© 2024 Jenny Lee Web Dev Design</p>
               </footer>
             </main>
 
@@ -418,6 +430,20 @@ document.querySelectorAll('.js-t-line').forEach((element, index) => {
     element.style.transform = `translate(0px, ${index * 30}px)`;
   }, index * 1000);
 });
+</script>
+
+<script>
+document.getElementById('read-more').addEventListener('click', function() {
+  var moreText = document.getElementById('more-text');
+  if (moreText.style.display === 'none') {
+    moreText.style.display = 'inline';
+    this.textContent = 'Read Less';
+  } else {
+    moreText.style.display = 'none';
+    this.textContent = 'Read More';
+  }
+});
+
 </script>
     
 </body>
