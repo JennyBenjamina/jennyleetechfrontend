@@ -124,6 +124,7 @@ img {
 }
 .description {
   color:white;
+  margin-bottom: 0;
 }
 .modal-content {
     width: 70%;
