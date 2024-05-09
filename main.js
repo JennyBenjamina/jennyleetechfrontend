@@ -48,6 +48,7 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
 
+// function to add scolling images
 function addAnimation() {
   scrollers.forEach((scroller) => {
     // add data-animated="true" to every `.scroller` on the page

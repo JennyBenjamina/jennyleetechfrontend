@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+:root {
+  --black: #000;
+  --white: #fff;
+}
 
 
 body {
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background-color: var(--black);
   color: var(--text-color);
 }
 
@@ -132,19 +136,36 @@ img {
 
 .nav-masthead .nav-link {
     font-weight: 700;
-    color: #000;
+    color: var(--white);
     background-color: transparent;
     border-bottom: .25rem solid transparent;
+  font-size: 1.4rem;
+    position: relative;
+    text-decoration: none;
+  
 }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+
+
 .nav-masthead .active {
     color: #d03acd;
 }
 
-/* .subhead{
-  font-weight: 600;
-  margin-top: 150px;
-  color: #90278E;
-} */
 
 
 .container {
@@ -345,10 +366,6 @@ body .display-3{
 
 
 
-.nav-link {
-  color: black !important; 
-  font-size: 1.4rem;
-}
 
 .bio-text {
   color: #3c6ca8;
@@ -368,7 +385,7 @@ body .display-3{
 }
 
 #topBar.scrolled {
-  background-color: #eae164 !important;
+  background-color: #201e07 !important;
 
 }
 
@@ -404,6 +421,7 @@ h1.t-line {
 
 
 .js-t-line {
+  color: var(--white);
   font-size: 7.5rem;
   font-weight: 400;
   line-height: 50%;
