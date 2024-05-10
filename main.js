@@ -1,13 +1,4 @@
-// video stop and start
-var video = document.getElementById("myVideo");
 
-    video.addEventListener("mouseover", function() {
-      video.pause();
-    });
-
-    video.addEventListener("mouseout", function() {
-      video.play();
-    });
 
 
 
@@ -15,10 +6,13 @@ var video = document.getElementById("myVideo");
 // navbar changing color
 window.onscroll = function() {
     var navbar = document.getElementById('topBar');
-    if (window.pageYOffset > 0) {
+    var footer = document.getElementById('footer');
+    if (window.scrollY > 0) {
         navbar.classList.add('scrolled');
+        footer.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+        footer.classList.remove('scrolled');
     }
     };
 
