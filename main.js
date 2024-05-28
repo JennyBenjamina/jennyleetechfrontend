@@ -132,3 +132,59 @@ const enhance2 = id => {
 }
 
 enhance2("channel-link2");
+
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  // on button click
+  document.querySelectorAll('.form-open').forEach(trigger=>{
+      trigger.addEventListener('click', function() {
+          // on every click
+          document.querySelectorAll('body').forEach(target=>target.classList.add('no-scroll'));
+      });
+  }
+  );
+
+ 
+
+  document.querySelectorAll('.form-panel-close-trigger, .form-header-button').forEach(trigger=>{
+    trigger.addEventListener('click', function() {
+        // on every click
+
+        setTimeout(function() {
+            document.querySelectorAll('body').forEach(target=>target.classList.remove('no-scroll'));
+        }, 500);
+    });
+}
+);
+
+
+});
+
+
+document.getElementById('form-open-id').addEventListener('click', function() {
+  var formPanel = document.getElementById('section-form-panel');
+  console.log(formPanel);
+  if (formPanel.style.display === 'none') {
+      formPanel.style.display = 'block';
+  } else {
+      formPanel.style.display = 'none';
+  }
+  });
+
+document.getElementById('form-open-id').addEventListener('click', function() {
+    document.querySelector('.form-panel').style.transform = 'translate3d(0%, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)';
+  });
+
+
+
+// read more button
+document.getElementById('read-more').addEventListener('click', function() {
+  var moreText = document.getElementById('more-text');
+  if (moreText.style.display === 'none') {
+      moreText.style.display = 'inline';
+      this.textContent = 'Read Less';
+  } else {
+      moreText.style.display = 'none';
+      this.textContent = 'Read More';
+  }
+  }); 
