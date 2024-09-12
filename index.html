@@ -31,6 +31,19 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+
+    <!-- Install this snippet AFTER the Hotjar Tracking code. -->
+    <script>
+      var userId = your_user_id || null; // Replace your_user_id with your own if available.
+      window.hj("identify", userId, {
+        // Add your own custom attributes here. Some EXAMPLES:
+        // 'Signed up': '2019—06-20Z', // Signup date in ISO-8601 format.
+        // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
+        // 'Total purchases': 15, // Send numbers without quotes.
+        // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
+        // 'Last refund date': null, // Send null when no value exists for a user.
+      });
+    </script>
   </head>
   <body>
     <header>
@@ -121,13 +134,106 @@
 
       <p id="work">&nbsp;</p>
 
+      <div class="container">
+        <!-- isotope -->
+        <h2>Filter Based on Technology</h2>
+
+        <div id="filters" class="button-group">
+          <button id="test" class="button is-checked" data-filter="*">
+            show all
+          </button>
+          <button class="button" data-filter=".html">Plain Html</button>
+          <button class="button" data-filter=".cms">CMS</button>
+          <button class="button" data-filter=".react, .alkaline-earth">
+            React App
+          </button>
+          <button class="button" data-filter=".data">Data</button>
+        </div>
+        <hr class="featurette-divider" />
+
+        <div class="grid">
+          <div class="element-item react" data-category="react">
+            <img src="images/web1.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(1)">
+              <div class="overlay-text">Events Projector</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item react" data-category="react">
+            <img src="images/web2.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(2)">
+              <div class="overlay-text">Ad Hoc Wikipedia</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item cms" data-category="cms">
+            <img src="images/web3.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(3)">
+              <div class="overlay-text">California Junior Golf</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item html" data-category="html">
+            <img src="images/web4.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(4)">
+              <div class="overlay-text">Kaili Marie</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item cms" data-category="cms">
+            <img src="images/web5.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(5)">
+              <div class="overlay-text">Tecfar Manufacturing</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item cms" data-category="cms">
+            <img src="images/web6.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(6)">
+              <div class="overlay-text">Izzy's Nail Shop</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item react" data-category="react">
+            <img src="images/web7.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(7)">
+              <div class="overlay-text">2023 La Hacks - Study Guide App</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item data" data-category="data">
+            <img src="images/web8.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(8)">
+              <div class="overlay-text">Tweeter</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+          <div class="element-item react" data-category="react">
+            <img src="images/web9.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(9)">
+              <div class="overlay-text">Golf Shop Assistant</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
+        </div>
+      </div>
+      <!-- end isotope -->
       <!-- Start Content Container -->
 
-      <div class="container">
+      <!-- <div class="container">
         <h2 class="subhead mt-lg-5">WEB APPS</h2>
-        <hr class="featurette-divider" />
+        <hr class="featurette-divider" /> -->
         <!-- New Row -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-4">
             <div class="container2">
               <img src="images/web1.png" class="image" />
@@ -152,9 +258,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- New Row -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-4">
             <div class="container2">
               <img src="images/web4.png" class="image" />
@@ -179,9 +285,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- New Row -->
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-md-4">
             <div class="container2">
               <img src="images/web7.png" class="image" />
@@ -206,7 +312,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <p>&nbsp;</p>
         <p class="approach-text">
           <!-- These projects use ReactJS, AngularJS, Squarespace, Python, openAI,
@@ -821,10 +927,11 @@
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
-    <script src="lightbox.js"></script>
-    <script src="livereload.js"></script>
-    <script src="main.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/livereload.js"></script>
+    <script src="js/main.js"></script>
 
     <script>
       // window.addEventListener('DOMContentLoaded', adjustheroVideoHeight);
