@@ -829,79 +829,35 @@ a {
   padding: 0;
 }
 
-/* .element-item .name {
-  position: absolute;
+/* end isotope */
 
-  left: 10px;
-  top: 60px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 12px;
-  font-weight: normal;
+/* flickity */
+
+.carousel {
+  background: #000;
 }
 
-.element-item .symbol {
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 42px;
-  font-weight: bold;
-  color: white;
-}
-.element-item .number {
-  position: absolute;
-  right: 8px;
-  top: 5px;
+.carousel-cell {
+  margin-right: 20px;
+  overflow: hidden;
 }
 
-.element-item .weight {
-  position: absolute;
-  left: 10px;
-  top: 76px;
-  font-size: 12px;
-} */
+.carousel-cell img {
+  display: block;
+  height: 200px;
+}
 
-.element-item.alkali {
-  background: #f00;
-  background: hsl(0, 100%, 50%);
+.flickity-button {
+  display: none !important;
 }
-.element-item.alkaline-earth {
-  background: #f80;
-  background: hsl(36, 100%, 50%);
+
+@media screen and (min-width: 768px) {
+  .carousel-cell img {
+    height: 400px;
+  }
 }
-.element-item.lanthanoid {
-  background: #ff0;
-  background: hsl(72, 100%, 50%);
-}
-.element-item.actinoid {
-  background: #0f0;
-  background: hsl(108, 100%, 50%);
-}
-.element-item.transition {
-  background: #0f8;
-  background: hsl(144, 100%, 50%);
-}
-.element-item.post-transition {
-  background: #0ff;
-  background: hsl(180, 100%, 50%);
-}
-.element-item.metalloid {
-  background: #08f;
-  background: hsl(216, 100%, 50%);
-}
-.element-item.diatomic {
-  background: #00f;
-  background: hsl(252, 100%, 50%);
-}
-.element-item.halogen {
-  background: #f0f;
-  background: hsl(288, 100%, 50%);
-}
-.element-item.noble-gas {
-  background: #f08;
-  background: hsl(324, 100%, 50%);
-}
-/* -- Isotope Styles -- */
+
+/* flickity end */
 
 /* -- YouTube Link Styles -- */
 

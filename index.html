@@ -16,34 +16,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="icon" type="image/png" href="images/favicon.png" />
-    <script>
-      (function (h, o, t, j, a, r) {
-        h.hj =
-          h.hj ||
-          function () {
-            (h.hj.q = h.hj.q || []).push(arguments);
-          };
-        h._hjSettings = { hjid: 5068129, hjsv: 6 };
-        a = o.getElementsByTagName("head")[0];
-        r = o.createElement("script");
-        r.async = 1;
-        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-        a.appendChild(r);
-      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+   
 
-    <!-- Install this snippet AFTER the Hotjar Tracking code. -->
-    <script>
-      var userId = your_user_id || null; // Replace your_user_id with your own if available.
-      window.hj("identify", userId, {
-        // Add your own custom attributes here. Some EXAMPLES:
-        // 'Signed up': '2019—06-20Z', // Signup date in ISO-8601 format.
-        // 'Last purchase category': 'Electronics', // Send strings with quotes around them.
-        // 'Total purchases': 15, // Send numbers without quotes.
-        // 'Last purchase date': '2019-06-20Z', // Send dates in ISO-8601 format.
-        // 'Last refund date': null, // Send null when no value exists for a user.
-      });
-    </script>
+   
   </head>
   <body>
     <header>
@@ -61,12 +37,7 @@
       </nav>
     </header>
     <main role="main">
-      <!-- <h1 class="container-fluid t-line d-none d-md-flex">
-
-  <div class="js-t-line">LEARN</div>
-  <div class="js-t-line">INSPIRE</div>
-  <div class="js-t-line">MOTIVATE</div>
-</h1> -->
+   
 
       <div class="tagline d-none d-md-grid">
         <div id="text">
@@ -103,15 +74,7 @@
           </div>
         </div>
 
-        <!-- <a id="source-link" class="meta-link" href="https://google.com" target="_blank">
-  <i class="fa-solid fa-link"></i>
-  <span>Email</span>
-</a>
-
-<a id="yt-link" class="meta-link" href="https://google.com" target="_blank">
-  <i class="fa-brands fa-youtube"></i>
-  <span>Say Hi</span>
-</a> -->
+        
       </div>
 
       <h1 class="container d-md-none mt-10">
@@ -152,6 +115,14 @@
         <hr class="featurette-divider" />
 
         <div class="grid">
+          <div class="element-item cms" data-category="cms">
+            <img src="images/web10.png" class="image" />
+            <div class="overlay" onclick="openModal();currentSlide(10)">
+              <div class="overlay-text">Heather King Golf</div>
+            </div>
+            <p class="number"></p>
+            <p class="weight"></p>
+          </div>
           <div class="element-item react" data-category="react">
             <img src="images/web1.png" class="image" />
             <div class="overlay" onclick="openModal();currentSlide(1)">
@@ -224,103 +195,42 @@
             <p class="number"></p>
             <p class="weight"></p>
           </div>
+
+         
         </div>
       </div>
       <!-- end isotope -->
-      <!-- Start Content Container -->
-
-      <!-- <div class="container">
-        <h2 class="subhead mt-lg-5">WEB APPS</h2>
-        <hr class="featurette-divider" /> -->
-        <!-- New Row -->
-        <!-- <div class="row">
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web1.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(1)">
-                <div class="overlay-text">Events Projector</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web2.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(2)">
-                <div class="overlay-text">Ad Hoc Wikipedia</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web3.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(3)">
-                <div class="overlay-text">California Junior Golf</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- New Row -->
-        <!-- <div class="row">
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web4.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(4)">
-                <div class="overlay-text">Kaili Marie</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web5.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(5)">
-                <div class="overlay-text">Tecfar Manufacturing</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web6.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(6)">
-                <div class="overlay-text">Izzy's Nail Shop</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <!-- New Row -->
-        <!-- <div class="row">
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web7.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(7)">
-                <div class="overlay-text">2023 La Hacks - Study Guide App</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web8.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(8)">
-                <div class="overlay-text">Tweeter</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="container2">
-              <img src="images/web9.png" class="image" />
-              <div class="overlay" onclick="openModal();currentSlide(5)">
-                <div class="overlay-text">Golf Shop Assistant</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+  
         <p>&nbsp;</p>
-        <p class="approach-text">
-          <!-- These projects use ReactJS, AngularJS, Squarespace, Python, openAI,
-          and Shopify. -->
-        </p>
-        <p class="">&nbsp;</p>
 
-        <h2 class="subhead mt-lg-5">Golfer</h2>
+        <p class="">&nbsp;</p>
+        <!-- carousel -->
+        <div class="carousel" >
+          <div class="carousel-cell">
+            <img src="images/print4.jpg" alt="contrail" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/print5.jpg" alt="golden hour" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/print6.jpg" alt="flight formation" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/print1.jpg" alt="xxio" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/print3.jpg" alt="golf" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/print2.jpeg" alt="text" />
+          </div>
+          <div class="carousel-cell">
+            <img src="images/print4.jpeg" alt="cat nose" />
+          </div>
+        
+        </div>
+        <!-- carousel -->
+        <!-- <h2 class="subhead mt-lg-5">Golfer</h2>
         <hr class="featurette-divider" />
         <div class="scroller" data-direction="right" data-speed="fast">
           <div class="scroller__inner">
@@ -329,9 +239,10 @@
             <img src="images/print3.jpg" alt="" />
             <img src="images/print4.jpeg" alt="" />
           </div>
-        </div>
+        </div> -->
 
         <p id="about">&nbsp;</p>
+        <div class="container">
         <h2 class="subhead mt-lg-5">About Me</h2>
         <hr class="featurette-divider" />
 
@@ -340,7 +251,7 @@
             <div class="bio-photo-container">
               <img
                 src="images/bio-photo.jpg"
-                class="bio-photo d-block mx-auto"
+                class="bio-photo d-block mx-auto rounded-circle"
               />
             </div>
           </div>
@@ -351,26 +262,12 @@
               Hey there, I'm Jenny Lee, your go-to gal for all things web
               wizardry and golf greatness! As the brains behind Jenny Lee Web
               Services, I get to flex my tech muscles, whipping up dynamic user
-              interfaces with ReactJS and AngularJS, while also dabbling in
-              Python (Flask) for some backend magic.
-              <span id="more-text" style="display: none">
-                From fine-tuning websites on Squarespace to adding that extra
-                oomph with Shopify's e-commerce prowess, I'm all about crafting
-                digital wonders that marry functionality with aesthetics. But
-                wait, there's more! When I'm not buried in code, you'll catch me
-                at Oakmont Country Club, making sure tee-offs go off without a
-                hitch and keeping the golf shop looking like a pro
-                merchandiser's dream. With a background that spans from the
-                greens of professional golf tournaments to the halls of
-                academia, I bring a unique blend of passion and expertise to
-                everything I do, whether it's sinking birdies or slinging code.
-                Let's tee up some success together!
-              </span>
-              <button id="read-more" class="btn btn-info">Read More</button>
+              interfaces with ReactJS and Tailwind while also dabbling in NodeJs for some backend magic.
+            
             </p>
           </div>
         </div>
-
+      </div>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
@@ -383,6 +280,10 @@
       <div id="myModal" class="modal" style="display: none">
         <span class="close cursor" onclick="closeModal()">×</span>
         <div class="modal-content">
+
+       
+
+
           <div class="mySlides" style="display: none">
             <h2 class="work-title">Events Projector</h2>
             <p class="description">
@@ -533,6 +434,24 @@
               <a
                 class="btn btn-secondary"
                 href="https://oakmont-asst-1825624e3f92.herokuapp.com/"
+                role="button"
+                target="_blank"
+                >Visit Website »</a
+              >
+            </div>
+          </div>
+
+          <div class="mySlides" style="display: none">
+            <h2 class="work-title">Heather King Golf</h2>
+            <p class="description">
+              A Professional Website using Custom SquareSpace for a Golf Professional
+              <img src="images/website-work10.png" />
+            </p>
+
+            <div class="caption-container">
+              <a
+                class="btn btn-secondary"
+                href="https://heatherkinggolf.com"
                 role="button"
                 target="_blank"
                 >Visit Website »</a
@@ -882,7 +801,7 @@
         <div class="footer_content_wrapper">
           <div id="footer_item_col1" class="footer_item_wrapper">
             <a
-              href="mailto:mail@nathansmith.design"
+              href="mailto:jennylee1989@gmail.com"
               class="footer-link-item apply-fg-color w-inline-block"
               ><div class="footer-link-text text-small">
                 → info@JennyLee.Golf
@@ -928,23 +847,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<!-- <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script> -->
     <script src="js/lightbox.js"></script>
     <script src="js/livereload.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-      // window.addEventListener('DOMContentLoaded', adjustheroVideoHeight);
-      // window.addEventListener('resize', adjustheroVideoHeight);
 
-      // function adjustheroVideoHeight() {
-      //   var navbar = document.querySelector('.navbar'); // Replace '.navbar' with the selector for your navbar
-      //   var heroVideo = document.querySelector('.hero-video');
-      //   var navbarHeight = navbar.offsetHeight;
-
-      //   heroVideo.style.height = 'calc(50vh - ' + navbarHeight + 'px)';
-      //   heroVideo.style.marginTop = navbarHeight + 'px';
-      // }
-    </script>
   </body>
 </html>
