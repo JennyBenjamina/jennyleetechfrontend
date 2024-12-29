@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { format } from "date-fns";
 import { CalendarIcon } from "lucide-react";
@@ -12,10 +10,12 @@ interface DatePickerProps {
   onChange: (date: Date) => void;
 }
 export function DatePicker({ onChange }: DatePickerProps) {
-  const [date, setDate] = React.useState<Date>();
+  const [date, setDate] = React.useState<Date>(new Date());
   // Handle date selection
   const handleDateSelect = (selectedDate: Date | undefined) => {
-    setDate(selectedDate || undefined); // Update the local state
+    if (selectedDate) {
+      setDate(selectedDate); // Update the local state
+    }
     if (selectedDate) {
       onChange(selectedDate); // Notify the parent component
     }

@@ -17,18 +17,19 @@ import {
   SelectValue,
 } from "./ui/select";
 import { DatePicker } from "./DatePicker.tsx";
-import { toDate } from "date-fns";
 
 interface InputDataCardProps {
   handleWeight: (weight: number) => void;
   handleDisposition: (disposition: number) => void;
   handleDate: (date: Date) => void;
+  handleOnClick: () => void;
 }
 
 export function InputDataCard({
   handleWeight,
   handleDisposition,
   handleDate,
+  handleOnClick,
 }: InputDataCardProps) {
   const handleWeightChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const weight = parseFloat(event.target.value);
@@ -85,7 +86,7 @@ export function InputDataCard({
       </CardContent>
       <CardFooter className="flex justify-between">
         <Button variant="outline">Cancel</Button>
-        <Button>Save</Button>
+        <Button onClick={handleOnClick}>Save</Button>
       </CardFooter>
     </Card>
   );
