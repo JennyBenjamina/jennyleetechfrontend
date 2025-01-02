@@ -4,6 +4,7 @@ import { Toaster } from "./components/ui/toaster.tsx";
 import Home from "./pages/Home.tsx";
 import { Navigation } from "./components/Navigation.tsx";
 import WeightDataPage from "pages/WeightData.tsx";
+import Footer from "components/Footer.tsx";
 
 import "./App.css";
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/weightdata" element={<WeightDataPage />} />
       </Routes>
+      <Footer />
     </>
   );
 }

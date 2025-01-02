@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { InputDataCard } from "../components/InputDataCard.tsx";
+import useAuth from "../hooks/useAuth.tsx";
 import axiosInstance from "../api/axiosInstance.tsx";
 import { toast } from "../@/hooks/use-toast.ts";
 
@@ -7,6 +8,7 @@ function Home() {
   const [weight, setWeight] = useState<number>();
   const [disposition, setDisposition] = useState<number>();
   const [date, setDate] = useState<Date>(new Date());
+  const { activeUser } = useAuth();
 
   const handleWeight = (weight: number) => {
     setWeight(weight);
@@ -24,7 +26,7 @@ function Home() {
     try {
       console.log(axiosInstance, "axios");
       await axiosInstance.post("/weightData/addWeightData", {
-        userId: "1",
+        userId: activeUser.userId,
         weight: weight,
         disposition: disposition,
         date: date,
@@ -51,12 +53,6 @@ function Home() {
         handleDate={handleDate}
         handleOnClick={handleOnClick}
       />
-      <div className="mt-4">
-        <h3 className="font-bold">Summary:</h3>
-        <p>Weight: {weight ?? "N/A"} lbs</p>
-        <p>Disposition: {disposition ?? "N/A"}</p>
-        <p>Date: {date ? date.toLocaleDateString() : "N/A"}</p>
-      </div>
     </div>
   );
 }
