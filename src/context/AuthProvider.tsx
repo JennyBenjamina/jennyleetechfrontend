@@ -55,7 +55,7 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     },
   ]);
 
-  const [activeUser, setActiveUser] = useState<User>(users[0]);
+  const [activeUser, setActiveUser] = useState<User>(users[1]);
 
   return (
     <AuthContext.Provider

@@ -39,7 +39,7 @@ function WeightDataPage() {
 
   return (
     <div className="container mx-auto py-10">
-      <WeightDataChart />
+      <WeightDataChart data={data} />
       <DataTable columns={columns} data={data} />
     </div>
   );

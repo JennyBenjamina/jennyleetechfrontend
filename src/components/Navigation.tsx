@@ -53,10 +53,10 @@ export function Navigation() {
             <NavigationMenuTrigger>Settings</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[1fr]">
-                <ListItem href="/docs" title="Profile">
+                <ListItem href="/profile" title="Profile">
                   Change your goal, age, and weight here.
                 </ListItem>
-                <ListItem href="/docs/installation" title="Journal">
+                <ListItem href="/journal" title="Journal">
                   Write what you need to remember.
                 </ListItem>
               </ul>
@@ -70,7 +70,7 @@ export function Navigation() {
         </NavigationMenuList>
       </NavigationMenu>
       <div className="text-center text-2xl my-4">
-        {activeUser.firstName}'s profile
+        {activeUser.firstName}'s Space
       </div>
     </>
   );
