@@ -53,27 +53,6 @@ export default function Profile() {
             <Button className="w-full">Save Changes</Button>
           </CardContent>
         </Card>
-        <Card>
-          <CardHeader>
-            <CardTitle>Change Password</CardTitle>
-            <CardDescription>Update your account password.</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="currentPassword">Current Password</Label>
-              <Input id="currentPassword" type="password" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="newPassword">New Password</Label>
-              <Input id="newPassword" type="password" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="confirmPassword">Confirm Password</Label>
-              <Input id="confirmPassword" type="password" />
-            </div>
-            <Button className="w-full">Change Password</Button>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );

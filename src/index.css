@@ -11,3 +11,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.special-edition {
+  width: 200px;
+  height: 100px;
+  border: 10px solid transparent;
+  border-image: url("./assets/blacklace4.png") 17 stretch;
+}
+
+/* .my-border {
+  border-top: 8px solid black;
+  border-style: double;
+} */
+
+/* .my-border::before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  border: 8px solid green;
+  width: 100%;
+} */
+@import url("https://fonts.googleapis.com/css2?family=UnifrakturCook:opsz@32..64&display=swap"); /* For Blackletter-style headers */
+@import url("https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&display=swap"); /* For body text */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"); /* For decorative drop caps */
+
+#news {
+  font-size: 8rem;
+}
+
+/* Header/Title Fonts (Blackletter-style) */
+.header-title {
+  font-family: "UnifrakturCook", serif;
+}
+
+/* Body Text Fonts (Classic Serif) */
+/* .body-text { */
+p {
+  font-family: "Garamond", serif;
+}
+
+/* Drop Caps (Decorative Serif) */
+.drop-cap {
+  font-family: "Cinzel", serif;
+  font-size: 3rem; /* Adjust as needed */
+  font-weight: bold;
+}

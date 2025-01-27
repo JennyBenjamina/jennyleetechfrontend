@@ -56,7 +56,7 @@ export function Navigation() {
                 <ListItem href="/profile" title="Profile">
                   Change your goal, age, and weight here.
                 </ListItem>
-                <ListItem href="/journal" title="Journal">
+                <ListItem href="/journals" title="Journal">
                   Write what you need to remember.
                 </ListItem>
               </ul>

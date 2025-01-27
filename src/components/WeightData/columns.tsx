@@ -8,7 +8,6 @@ export const columns: ColumnDef<WeightData>[] = [
     sortingFn: (rowA, rowB, columnId) => {
       const dateA = new Date(rowA.getValue(columnId));
       const dateB = new Date(rowB.getValue(columnId));
-      console.log(dateA, dateB);
       return dateB.getTime() - dateA.getTime(); // Descending order
     },
     cell: ({ getValue }) => {
